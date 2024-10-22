@@ -1,0 +1,14 @@
+[
+    {
+        "frame_id": [0, 6, 12, 18, 24, 30],
+        "description": ["dissect_gallbladder", "dissect_cysticANDduct", "dissect_cysticANDplate", "dissect_cysticANDduct", "dissect_cysticANDartery", "next action"]
+    },
+    {
+        "frame_id": [0, 6, 12, 18, 24, 30],
+        "description": ["aspirate_fluid", "dissect_fat", "dissect_cysticANDplate", "dissect_cysticANDartery", "dissect_gallbladder", "next action"]
+    },
+    {
+        "frame_id": [0, 6, 12, 18, 24, 30],
+        "description": ["dissect_cysticANDduct", "aspirate_fluid", "dissect_fat", "dissect_gallbladder", "dissect_cysticANDartery", "next action"]
+    }
+]

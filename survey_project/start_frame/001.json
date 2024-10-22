@@ -1,0 +1,74 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            114
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            114,
+            596
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            114,
+            596,
+            660
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "dissect_cysticANDduct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            114,
+            596,
+            660,
+            722
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "dissect_cysticANDduct",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    }
+]

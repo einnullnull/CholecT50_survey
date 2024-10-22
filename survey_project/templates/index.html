@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            max-width: 1000px;
+        }
+        #description {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            color: #444;
+            max-width: 1000px;
+        }
+        #vid-info {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        #images-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            width: 100%;
+            max-width: 1000px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #images-container img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #images-container .completed img {
+            border: 4px solid #ccc;
+        }
+        #next-image-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1000px;
+            height: 280px;
+        }
+        #next-image {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #next-image img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            border: 6px solid #add8e6;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        #next-image p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #666;
+        }
+        .options-container {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+            color: #333;
+            cursor: pointer;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.3);
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.4em;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #userForm label {
+            font-size: 1.4em; /* 增加受访者信息表单的文字大小 */
+            margin-bottom: 10px;
+        }
+        #userForm input {
+            font-size: 1.2em;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        let currentQuestionIndex = 0;
+        let currentVidIndex = 1;
+        let responses = [];
+        let userInfo = {};
+
+        // 显示用户信息表单
+        function showUserForm() {
+            const formHtml = `
+                <h1>Welcome to the Survey</h1>
+                <form id="userForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="experience">Clinical experience (years):</label>
+                    <input type="number" id="experience" name="experience" required><br><br>
+                    <label for="lapExp">Laparoscopic cholecystectomy experience (cases):</label>
+                    <input type="number" id="lapExp" name="lapExp" required><br><br>
+                    <label for="unit">Unit:</label>
+                    <input type="text" id="unit" name="unit" required><br><br>
+                    <button type="button" onclick="submitUserForm()">Start Survey</button>
+                </form>
+            `;
+            document.body.innerHTML = formHtml;
+        }
+
+        function submitUserForm() {
+            const form = document.getElementById('userForm');
+            userInfo.name = form.name.value;
+            userInfo.experience = form.experience.value;
+            userInfo.lapExp = form.lapExp.value;
+            userInfo.unit = form.unit.value;
+            document.body.innerHTML = surveyHtml;
+            loadQuestion();
+        }
+
+        const surveyHtml = `
+            <h1>This is a laparoscopic cholecystectomy, currently in the Calot Triangle Dissection Phase.</h1>
+            <div id="vid-info">Current VID: VID001</div>
+            <div id="description">The first five images are completed actions and their corresponding scenes, please select the next action for the sixth image.</div>
+            <div id="images-container"></div>
+            <div id="next-image-container">
+                <div id="next-image"></div>
+                <div class="options-container">
+                    <label><input type="checkbox" value="dissect cystic_duct"> dissect cystic_duct</label>
+                    <label><input type="checkbox" value="aspirate fluid"> aspirate fluid</label>
+                    <label><input type="checkbox" value="dissect gallbladder"> dissect gallbladder</label>
+                    <label><input type="checkbox" value="dissect cystic_artery"> dissect cystic_artery</label>
+                    <label><input type="checkbox" value="dissect cystic_plate"> dissect cystic_plate</label>
+                    <label><input type="checkbox" value="dissect fat"> dissect fat</label>
+                </div>
+            </div>
+            <button onclick="submitAnswer()">Submit</button>
+        `;
+
+        // 在页面加载时，获取图片和选项
+        async function loadQuestion() {
+            try {
+                const vidIndexStr = currentVidIndex.toString().padStart(3, '0');
+                const frameResponse = await fetch(`start_frame/${vidIndexStr}.json`); // 从json文件获取图片索引和描述
+                const frameData = await frameResponse.json();
+
+                if (currentQuestionIndex < frameData.length) {
+                    // 获取当前问题的图片和描述
+                    const frameIds = frameData[currentQuestionIndex].frame_id;
+                    const descriptions = frameData[currentQuestionIndex].description;
+
+                    document.getElementById('vid-info').innerText = `Current VID: VID${vidIndexStr}`;
+
+                    const imagesContainer = document.getElementById("images-container");
+                    const nextImageContainer = document.getElementById("next-image");
+                    imagesContainer.innerHTML = ""; // 清空之前的图片
+                    nextImageContainer.innerHTML = "";
+
+                    frameIds.slice(0, 5).forEach((frameId, index) => {
+                        const imgWrapper = document.createElement("div");
+                        imgWrapper.style = "display: flex; flex-direction: column; align-items: center;";
+                        imgWrapper.className = 'completed';
+
+                        const imgElement = document.createElement("img");
+                        const frameNumber = frameId.toString().padStart(6, '0'); // 将frameId转换为6位数，前面补0
+                        imgElement.src = `/images/VID${vidIndexStr}/${frameNumber}.png`;
+                        imgElement.alt = descriptions[index];
+
+                        const descElement = document.createElement("p");
+                        descElement.innerText = descriptions[index];
+
+                        imgWrapper.appendChild(imgElement);
+                        imgWrapper.appendChild(descElement);
+                        imagesContainer.appendChild(imgWrapper);
+                    });
+
+                    const nextImgElement = document.createElement("img");
+                    const nextFrameNumber = frameIds[5].toString().padStart(6, '0');
+                    nextImgElement.src = `/images/VID${vidIndexStr}/${nextFrameNumber}.png`;
+                    nextImgElement.alt = descriptions[5];
+
+                    const nextDescElement = document.createElement("p");
+                    nextDescElement.innerText = descriptions[5];
+
+                    nextImageContainer.appendChild(nextImgElement);
+                    nextImageContainer.appendChild(nextDescElement);
+
+                    // 清空之前的勾选结果
+                    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+                } else {
+                    // 显示调查完成的信息，并显示按钮进入下一个 VID
+                    document.body.innerHTML = `
+                        <h1>Congratulations! You have completed a video.</h1>
+                        <p>Please press the button below to proceed to the next video.</p>
+                        <button id="next-vid-button" onclick="loadNextVid()">Next VID</button>
+                    `;
+                }
+            } catch (error) {
+                console.error('加载选项或图片索引失败:', error);
+            }
+        }
+
+        function loadNextVid() {
+            currentVidIndex++;
+            currentQuestionIndex = 0;
+            document.body.innerHTML = surveyHtml;
+            loadQuestion();
+        }
+
+        // 处理用户的选择
+        function submitAnswer() {
+            const selectedOptions = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                .map(checkbox => checkbox.value);
+            responses.push({ questionIndex: currentQuestionIndex, answer: selectedOptions });
+            currentQuestionIndex++;
+            document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false); // 清空选项勾选状态
+            loadQuestion();
+        }
+
+        // 保存用户回答
+        function saveResponses() {
+            const data = {
+                userInfo: userInfo,
+                responses: responses
+            };
+            fetch('/save_responses', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+            .then(data => console.log('Survey responses saved:', data))
+            .catch(error => console.error('Error saving responses:', error));
+        }
+    </script>
+</head>
+<body onload="showUserForm()">
+</body>
+</html>

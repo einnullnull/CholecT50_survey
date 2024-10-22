@@ -1,0 +1,146 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            293
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            293,
+            318
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            293,
+            318,
+            333
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "dissect_fat",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            293,
+            318,
+            333,
+            429
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "dissect_fat",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            293,
+            318,
+            333,
+            429,
+            472
+        ],
+        "description": [
+            "None",
+            "dissect_gallbladder",
+            "dissect_fat",
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            293,
+            318,
+            333,
+            429,
+            472,
+            485
+        ],
+        "description": [
+            "dissect_gallbladder",
+            "dissect_fat",
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDartery",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            318,
+            333,
+            429,
+            472,
+            485,
+            546
+        ],
+        "description": [
+            "dissect_fat",
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDartery",
+            "dissect_cysticANDduct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            333,
+            429,
+            472,
+            485,
+            546,
+            553
+        ],
+        "description": [
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDartery",
+            "dissect_cysticANDduct",
+            "dissect_cysticANDartery",
+            "next action"
+        ]
+    }
+]

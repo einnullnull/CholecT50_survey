@@ -1,0 +1,74 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            251
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            251,
+            291
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect_cysticANDduct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            251,
+            291,
+            468
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect_cysticANDduct",
+            "aspirate_fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            251,
+            291,
+            468,
+            493
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect_cysticANDduct",
+            "aspirate_fluid",
+            "dissect_cysticANDduct",
+            "next action"
+        ]
+    }
+]

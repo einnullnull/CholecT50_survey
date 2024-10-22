@@ -1,0 +1,10 @@
+* dissect_fat¡¾340¡¿ dissect_cysticANDduct¡¾399¡¿  #
+* dissect_cysticANDduct¡¾306¡¿ dissect_cysticANDartery¡¾472¡¿  #
+* dissect_gallbladder¡¾0¡¿ dissect_cysticANDduct¡¾268¡¿ dissect_gallbladder¡¾327¡¿ dissect_cysticANDartery¡¾357¡¿ dissect_gallbladder¡¾389¡¿ aspirate_fluid¡¾427¡¿  #
+* dissect_gallbladder¡¾89¡¿ dissect_cysticANDduct¡¾298¡¿ dissect_cysticANDartery¡¾409¡¿ dissect_cysticANDplate¡¾624¡¿ dissect_cysticANDduct¡¾658¡¿ dissect_gallbladder¡¾743¡¿ dissect_cysticANDduct¡¾776¡¿ dissect_gallbladder¡¾815¡¿  #
+* dissect_gallbladder¡¾3¡¿ dissect_cysticANDduct¡¾111¡¿ dissect_cysticANDartery¡¾242¡¿ dissect_cysticANDplate¡¾286¡¿ dissect_cysticANDduct¡¾416¡¿  #
+* dissect_gallbladder¡¾697¡¿ dissect_gallbladder¡¾1027¡¿ dissect_cysticANDduct¡¾1108¡¿ dissect_cysticANDartery¡¾1244¡¿ dissect_gallbladder¡¾1271¡¿ dissect_cysticANDartery¡¾1381¡¿ dissect_cysticANDduct¡¾1478¡¿ dissect_gallbladder¡¾1510¡¿ dissect_cysticANDduct¡¾1611¡¿ dissect_cysticANDartery¡¾1627¡¿ aspirate_fluid¡¾1651¡¿  #
+* dissect_gallbladder¡¾91¡¿ dissect_cysticANDartery¡¾250¡¿ dissect_gallbladder¡¾266¡¿ dissect_cysticANDduct¡¾289¡¿ dissect_gallbladder¡¾331¡¿  #
+* dissect_fat¡¾637¡¿ aspirate_fluid¡¾814¡¿ dissect_fat¡¾821¡¿ aspirate_fluid¡¾958¡¿ dissect_fat¡¾965¡¿ aspirate_fluid¡¾1215¡¿ dissect_gallbladder¡¾1243¡¿ dissect_cysticANDartery¡¾1883¡¿ dissect_cysticANDplate¡¾1903¡¿ dissect_cysticANDduct¡¾1953¡¿  #
+* dissect_gallbladder¡¾282¡¿ dissect_cysticANDplate¡¾459¡¿ dissect_cysticANDduct¡¾545¡¿ dissect_gallbladder¡¾697¡¿ aspirate_fluid¡¾821¡¿ dissect_cysticANDduct¡¾974¡¿ dissect_cysticANDartery¡¾1084¡¿  #
+* dissect_gallbladder¡¾123¡¿ dissect_cysticANDduct¡¾260¡¿ dissect_cysticANDartery¡¾401¡¿ dissect_cysticANDplate¡¾456¡¿  #

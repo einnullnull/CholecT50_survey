@@ -1,0 +1,182 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            109
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            109,
+            296
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            109,
+            296,
+            338
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            109,
+            296,
+            338,
+            477
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            109,
+            296,
+            338,
+            477,
+            533
+        ],
+        "description": [
+            "None",
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            109,
+            296,
+            338,
+            477,
+            533,
+            584
+        ],
+        "description": [
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            296,
+            338,
+            477,
+            533,
+            584,
+            639
+        ],
+        "description": [
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            338,
+            477,
+            533,
+            584,
+            639,
+            766
+        ],
+        "description": [
+            "dissect_gallbladder",
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDduct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            477,
+            533,
+            584,
+            639,
+            766,
+            811
+        ],
+        "description": [
+            "aspirate_fluid",
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDduct",
+            "dissect_cysticANDplate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            533,
+            584,
+            639,
+            766,
+            811,
+            875
+        ],
+        "description": [
+            "dissect_gallbladder",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDduct",
+            "dissect_cysticANDplate",
+            "dissect_cysticANDartery",
+            "next action"
+        ]
+    }
+]
