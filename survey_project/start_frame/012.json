@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
+            "dissect gallbladder",
+            "dissect cystic_plate",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDduct",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -99,11 +99,11 @@
             974
         ],
         "description": [
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
-            "aspirate_fluid",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -117,11 +117,11 @@
             1084
         ],
         "description": [
-            "dissect_cysticANDplate",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
-            "aspirate_fluid",
-            "dissect_cysticANDduct",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect cystic_duct",
             "next action"
         ]
     }

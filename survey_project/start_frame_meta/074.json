@@ -1,0 +1,380 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            9
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            9,
+            86
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            9,
+            86,
+            249
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            9,
+            86,
+            249,
+            283
+        ],
+        "description": [
+            "None",
+            "None",
+            "tissueRetraction",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            9,
+            86,
+            249,
+            283,
+            293
+        ],
+        "description": [
+            "None",
+            "tissueRetraction",
+            "dissect",
+            "coagulate",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            9,
+            86,
+            249,
+            283,
+            293,
+            501
+        ],
+        "description": [
+            "tissueRetraction",
+            "dissect",
+            "coagulate",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            86,
+            249,
+            283,
+            293,
+            501,
+            534
+        ],
+        "description": [
+            "dissect",
+            "coagulate",
+            "tissueRetraction",
+            "dissect",
+            "vesselClipping",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            249,
+            283,
+            293,
+            501,
+            534,
+            560
+        ],
+        "description": [
+            "coagulate",
+            "tissueRetraction",
+            "dissect",
+            "vesselClipping",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            283,
+            293,
+            501,
+            534,
+            560,
+            571
+        ],
+        "description": [
+            "tissueRetraction",
+            "dissect",
+            "vesselClipping",
+            "dissect",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            293,
+            501,
+            534,
+            560,
+            571,
+            599
+        ],
+        "description": [
+            "dissect",
+            "vesselClipping",
+            "dissect",
+            "tissueRetraction",
+            "vesselClipping",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            501,
+            534,
+            560,
+            571,
+            599,
+            612
+        ],
+        "description": [
+            "vesselClipping",
+            "dissect",
+            "tissueRetraction",
+            "vesselClipping",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            534,
+            560,
+            571,
+            599,
+            612,
+            632
+        ],
+        "description": [
+            "dissect",
+            "tissueRetraction",
+            "vesselClipping",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            560,
+            571,
+            599,
+            612,
+            632,
+            700
+        ],
+        "description": [
+            "tissueRetraction",
+            "vesselClipping",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            571,
+            599,
+            612,
+            632,
+            700,
+            806
+        ],
+        "description": [
+            "vesselClipping",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "aspirate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            599,
+            612,
+            632,
+            700,
+            806,
+            850
+        ],
+        "description": [
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "aspirate",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            612,
+            632,
+            700,
+            806,
+            850,
+            913
+        ],
+        "description": [
+            "dissect",
+            "tissueRetraction",
+            "aspirate",
+            "coagulate",
+            "irrigate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            632,
+            700,
+            806,
+            850,
+            913,
+            1007
+        ],
+        "description": [
+            "tissueRetraction",
+            "aspirate",
+            "coagulate",
+            "irrigate",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            700,
+            806,
+            850,
+            913,
+            1007,
+            1188
+        ],
+        "description": [
+            "aspirate",
+            "coagulate",
+            "irrigate",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            806,
+            850,
+            913,
+            1007,
+            1188,
+            1248
+        ],
+        "description": [
+            "coagulate",
+            "irrigate",
+            "tissueRetraction",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            850,
+            913,
+            1007,
+            1188,
+            1248,
+            1346
+        ],
+        "description": [
+            "irrigate",
+            "tissueRetraction",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            913,
+            1007,
+            1188,
+            1248,
+            1346,
+            1551
+        ],
+        "description": [
+            "tissueRetraction",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    }
+]

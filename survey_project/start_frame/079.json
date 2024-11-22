@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
-            "aspirate_fluid",
+            "dissect gallbladder",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_gallbladder",
-            "aspirate_fluid",
-            "dissect_gallbladder",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_gallbladder",
-            "aspirate_fluid",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_duct",
             "next action"
         ]
     }

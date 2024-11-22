@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -99,11 +99,11 @@
             480
         ],
         "description": [
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
             "next action"
         ]
     },
@@ -117,11 +117,11 @@
             519
         ],
         "description": [
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -135,11 +135,11 @@
             588
         ],
         "description": [
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
-            "aspirate_fluid",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -153,11 +153,11 @@
             644
         ],
         "description": [
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
-            "aspirate_fluid",
-            "dissect_cysticANDplate",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_plate",
             "next action"
         ]
     }

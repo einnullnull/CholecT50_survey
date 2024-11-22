@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
+            "dissect fat",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
-            "dissect_cysticANDplate",
+            "dissect fat",
+            "dissect cystic_plate",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_fat",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDplate",
+            "dissect fat",
+            "dissect cystic_plate",
+            "dissect cystic_plate",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_fat",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect cystic_plate",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
             "next action"
         ]
     }

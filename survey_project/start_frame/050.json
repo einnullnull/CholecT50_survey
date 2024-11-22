@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
+            "dissect fat",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
-            "dissect_gallbladder",
+            "dissect fat",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_fat",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_fat",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -99,11 +99,11 @@
             558
         ],
         "description": [
-            "dissect_fat",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
             "next action"
         ]
     }

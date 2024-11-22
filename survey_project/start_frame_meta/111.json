@@ -1,0 +1,128 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            536
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            536,
+            579
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            536,
+            579,
+            625
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            536,
+            579,
+            625,
+            952
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            536,
+            579,
+            625,
+            952,
+            1004
+        ],
+        "description": [
+            "None",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "vesselClipping",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            536,
+            579,
+            625,
+            952,
+            1004,
+            1703
+        ],
+        "description": [
+            "dissect",
+            "coagulate",
+            "dissect",
+            "vesselClipping",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            579,
+            625,
+            952,
+            1004,
+            1703,
+            1716
+        ],
+        "description": [
+            "coagulate",
+            "dissect",
+            "vesselClipping",
+            "dissect",
+            "tissueRetraction",
+            "next action"
+        ]
+    }
+]

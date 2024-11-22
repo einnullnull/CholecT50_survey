@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
             "next action"
         ]
     }

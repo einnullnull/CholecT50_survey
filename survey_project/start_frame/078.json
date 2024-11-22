@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_cysticANDduct",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_cysticANDduct",
-            "aspirate_fluid",
+            "dissect cystic_duct",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_cysticANDduct",
-            "aspirate_fluid",
-            "dissect_cysticANDduct",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
             "next action"
         ]
     }

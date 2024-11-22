@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
+            "dissect fat",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
-            "aspirate_fluid",
+            "dissect fat",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_fat",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_fat",
-            "aspirate_fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -99,11 +99,11 @@
             1215
         ],
         "description": [
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_fat",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
             "next action"
         ]
     },
@@ -117,11 +117,11 @@
             1243
         ],
         "description": [
-            "aspirate_fluid",
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_fat",
-            "aspirate_fluid",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
             "next action"
         ]
     },
@@ -135,11 +135,11 @@
             1883
         ],
         "description": [
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_gallbladder",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -153,11 +153,11 @@
             1903
         ],
         "description": [
-            "aspirate_fluid",
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_gallbladder",
-            "dissect_cysticANDartery",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_artery",
             "next action"
         ]
     },
@@ -171,11 +171,11 @@
             1953
         ],
         "description": [
-            "dissect_fat",
-            "aspirate_fluid",
-            "dissect_gallbladder",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDplate",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_artery",
+            "dissect cystic_plate",
             "next action"
         ]
     }

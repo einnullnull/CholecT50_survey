@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_fat",
+            "dissect gallbladder",
+            "dissect fat",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_gallbladder",
-            "dissect_fat",
-            "dissect_gallbladder",
+            "dissect gallbladder",
+            "dissect fat",
+            "dissect gallbladder",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_gallbladder",
-            "dissect_fat",
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
+            "dissect gallbladder",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_plate",
             "next action"
         ]
     },
@@ -99,11 +99,11 @@
             485
         ],
         "description": [
-            "dissect_gallbladder",
-            "dissect_fat",
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDartery",
+            "dissect gallbladder",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
             "next action"
         ]
     },
@@ -117,11 +117,11 @@
             546
         ],
         "description": [
-            "dissect_fat",
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -135,11 +135,11 @@
             553
         ],
         "description": [
-            "dissect_gallbladder",
-            "dissect_cysticANDplate",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
             "next action"
         ]
     }

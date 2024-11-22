@@ -95,7 +95,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 20px;
+            gap: 10px;
             padding: 10px;
             background-color: #fff;
             border-radius: 8px;
@@ -144,9 +144,17 @@
         let currentVidIndex = 1;
         let responses = [];
         let userInfo = {};
+        let currentGroupVideos = [];
+        let autoSaveInterval;
+        let instructionsAccepted = false;
 
         // 显示用户信息表单
         function showUserForm() {
+            if (!instructionsAccepted) {
+                document.getElementById('instructionModal').style.display = 'block';
+                return;
+            }
+            
             const formHtml = `
                 <h1>Welcome to the Survey</h1>
                 <form id="userForm">
@@ -158,20 +166,63 @@
                     <input type="number" id="lapExp" name="lapExp" required><br><br>
                     <label for="unit">Unit:</label>
                     <input type="text" id="unit" name="unit" required><br><br>
-                    <button type="button" onclick="submitUserForm()">Start Survey</button>
+                    <label for="groupId">Group ID (1-5):</label>
+                    <input type="number" id="groupId" name="groupId" min="1" max="5" required><br><br>
+                    <button type="button" onclick="submitUserForm(false)">Start New Survey</button>
+                    <button type="button" onclick="submitUserForm(true)">Continue Previous Survey</button>
                 </form>
             `;
             document.body.innerHTML = formHtml;
         }
 
-        function submitUserForm() {
+        async function submitUserForm(continuePrevious) {
             const form = document.getElementById('userForm');
             userInfo.name = form.name.value;
             userInfo.experience = form.experience.value;
             userInfo.lapExp = form.lapExp.value;
             userInfo.unit = form.unit.value;
-            document.body.innerHTML = surveyHtml;
-            loadQuestion();
+            userInfo.groupId = form.groupId.value;
+            
+            if (continuePrevious) {
+                // 尝试加载之前的响应
+                try {
+                    const response = await fetch(`/load_responses/${userInfo.name}/${userInfo.groupId}`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        responses = data.responses || [];
+                        currentVidIndex = data.currentVidIndex || 1;
+                        currentQuestionIndex = data.currentQuestionIndex || 0;
+                    }
+                } catch (error) {
+                    console.error('Error loading previous responses:', error);
+                }
+            }
+            
+            // 获取该组的视频列表
+            fetch(`/group_videos/${userInfo.groupId}`)
+                .then(response => response.json())
+                .then(videos => {
+                    currentGroupVideos = videos;
+                    if (!continuePrevious) {
+                        currentVidIndex = videos[0];
+                        currentQuestionIndex = 0;
+                    }
+                    document.body.innerHTML = surveyHtml;
+                    loadQuestion();
+                    
+                    // 启动自动保存
+                    startAutoSave();
+                })
+                .catch(error => console.error('Error loading group videos:', error));
+        }
+
+        function startAutoSave() {
+            // 每分钟自动保存一次
+            autoSaveInterval = setInterval(saveResponses, 60000);
+        }
+
+        function stopAutoSave() {
+            clearInterval(autoSaveInterval);
         }
 
         const surveyHtml = `
@@ -188,6 +239,7 @@
                     <label><input type="checkbox" value="dissect cystic_artery"> dissect cystic_artery</label>
                     <label><input type="checkbox" value="dissect cystic_plate"> dissect cystic_plate</label>
                     <label><input type="checkbox" value="dissect fat"> dissect fat</label>
+                    <label><input type="checkbox" value="others"> others</label>
                 </div>
             </div>
             <button onclick="submitAnswer()">Submit</button>
@@ -257,10 +309,21 @@
         }
 
         function loadNextVid() {
-            currentVidIndex++;
-            currentQuestionIndex = 0;
-            document.body.innerHTML = surveyHtml;
-            loadQuestion();
+            const currentIndex = currentGroupVideos.indexOf(currentVidIndex);
+            if (currentIndex < currentGroupVideos.length - 1) {
+                currentVidIndex = currentGroupVideos[currentIndex + 1];
+                currentQuestionIndex = 0;
+                document.body.innerHTML = surveyHtml;
+                loadQuestion();
+                saveResponses(); // 在切换视频时保存
+            } else {
+                stopAutoSave();
+                document.body.innerHTML = `
+                    <h1>Survey Completed</h1>
+                    <p>Thank you for participating in the survey!</p>
+                `;
+                saveResponses();
+            }
         }
 
         // 处理用户的选择
@@ -277,8 +340,12 @@
         function saveResponses() {
             const data = {
                 userInfo: userInfo,
-                responses: responses
+                groupId: userInfo.groupId,
+                responses: responses,
+                currentVidIndex: currentVidIndex,
+                currentQuestionIndex: currentQuestionIndex
             };
+            
             fetch('/save_responses', {
                 method: 'POST',
                 headers: {
@@ -289,8 +356,56 @@
             .then(data => console.log('Survey responses saved:', data))
             .catch(error => console.error('Error saving responses:', error));
         }
+
+        // 添加接受说明的函数
+        function acceptInstructions() {
+            instructionsAccepted = true;
+            document.getElementById('instructionModal').style.display = 'none';
+            showUserForm();
+        }
     </script>
 </head>
 <body onload="showUserForm()">
+    <div id="instructionModal" class="modal">
+        <div class="modal-content">
+            <h2>Survey Instructions</h2>
+            <div class="instructions">
+                <h3>Welcome to the Laparoscopic Cholecystectomy Survey</h3>
+                
+                <h4>Purpose:</h4>
+                <p>This survey aims to collect expert opinions on surgical workflow during laparoscopic cholecystectomy procedures.</p>
+                
+                <h4>Survey Structure:</h4>
+                <ul>
+                    <li>The survey is divided into 5 groups, each containing 10 video clips</li>
+                    <li>You will be assigned to one group (1-5)</li>
+                    <li>For each video clip, you will see multiple frames showing the surgical procedure</li>
+                    <li>The first five images show completed actions with their descriptions</li>
+                    <li>You need to predict the next action for the sixth image</li>
+                </ul>
+                
+                <h4>How to Complete:</h4>
+                <ol>
+                    <li>Fill in your personal information</li>
+                    <li>Select your assigned group number (1-5)</li>
+                    <li>For each question:
+                        <ul>
+                            <li>Review the five completed actions</li>
+                            <li>Select the most appropriate next action from the options provided</li>
+                            <li>Click "Submit" to proceed to the next question</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h4>Important Notes:</h4>
+                <ul>
+                    <li>Your progress is automatically saved every minute</li>
+                    <li>You can pause and resume the survey at any time</li>
+                    <li>Please complete all questions in your assigned group</li>
+                </ul>
+            </div>
+            <button class="consent-button" onclick="acceptInstructions()">I have read and agree to proceed</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -10,7 +10,6 @@ Description:
 import json
 import re
 
-
 def process_line(line):
     # 替换文件中的特殊字符，确保正确的【】符号
     line = line.replace('¡¾', '【').replace('¡¿', '】')
@@ -22,11 +21,17 @@ def process_line(line):
 
     matches = re.findall(pattern, line)
 
-    descriptions = [m[0] for m in matches]
+    descriptions = [adjust_description(m[0]) for m in matches]
     frame_ids = [int(m[1]) for m in matches]
 
     return descriptions, frame_ids
 
+def adjust_description(description):
+    # 首先替换 "AND" 为 "_"
+    # 然后将 "_" 替换为空格，保留中间的连接部分
+    description = description.replace("_", " ")
+    description = description.replace("AND", "_")
+    return description
 
 def generate_json(descriptions, frame_ids):
     json_list = []
@@ -47,7 +52,6 @@ def generate_json(descriptions, frame_ids):
         })
 
     return json_list
-
 
 def process_txt_file(txt_file_path, json_file_names):
     # 使用合适的编码读取文件
@@ -70,20 +74,20 @@ def process_txt_file(txt_file_path, json_file_names):
         print(f"Processing line {i + 1}: descriptions={descriptions}, frame_ids={frame_ids}")
 
         # 保存为 JSON 文件
+        # json_filename = f"start_frame/{json_file_names[i]:03d}.json"
         json_filename = f"start_frame/{json_file_names[i]:03d}.json"
         with open(json_filename, 'w', encoding='utf-8') as json_file:
             json.dump(json_data, json_file, indent=4, ensure_ascii=False)
 
 
-# 示例用法
-txt_file_path = './val_set/cholec50_six1016_noSIL_cross5_val.txt'  # 替换为你的 txt 文件路径
-# json_file_names = [79, 2, 51, 6, 25, 14, 66, 23, 50, 111]  # 示例文件名列表
+# CholecPI
+txt_file_path = './val_set/cholec50_six1016_noSIL_cross1_val.txt'  # 替换为你的 txt 文件路径
+json_file_names = [79, 2, 51, 6, 25, 14, 66, 23, 50, 111]  # 示例文件名列表
 # json_file_names = [80, 32, 5, 15, 40, 47, 26, 48, 70, 96]  # 示例文件名列表
 # json_file_names = [31, 57, 36, 18, 52, 68, 10, 8, 73, 103]  # 示例文件名列表
 # json_file_names = [42, 29, 60, 27, 65, 75, 22, 49, 12, 110]  # 示例文件名列表
-json_file_names = [78, 43, 62, 35, 74, 1, 56, 4, 13, 92]  # 示例文件名列表
+# json_file_names = [78, 43, 62, 35, 74, 1, 56, 4, 13, 92]  # 示例文件名列表
 
 # 调用函数处理 txt 文件
 process_txt_file(txt_file_path, json_file_names)
-
 

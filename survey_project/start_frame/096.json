@@ -31,7 +31,7 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
+            "dissect fat",
             "next action"
         ]
     },
@@ -48,8 +48,8 @@
             "None",
             "None",
             "None",
-            "dissect_fat",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -65,9 +65,9 @@
         "description": [
             "None",
             "None",
-            "dissect_fat",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
+            "dissect fat",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
             "next action"
         ]
     },
@@ -82,10 +82,10 @@
         ],
         "description": [
             "None",
-            "dissect_fat",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
             "next action"
         ]
     },
@@ -99,11 +99,11 @@
             787
         ],
         "description": [
-            "dissect_fat",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDartery",
-            "dissect_cysticANDduct",
-            "dissect_cysticANDduct",
+            "dissect fat",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "dissect cystic_duct",
             "next action"
         ]
     }
