@@ -95,7 +95,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 8px;
+            gap: 10px;
             padding: 10px;
             background-color: #fff;
             border-radius: 8px;
@@ -144,105 +144,54 @@
         let currentVidIndex = 1;
         let responses = [];
         let userInfo = {};
-        let currentGroupVideos = [];
-        let autoSaveInterval;
-        let instructionsAccepted = false;
 
         // 显示用户信息表单
         function showUserForm() {
-            if (!instructionsAccepted) {
-                document.getElementById('instructionModal').style.display = 'block';
-                return;
-            }
-            
             const formHtml = `
-                <h1>欢迎参与调查问卷</h1>
+                <h1>Welcome to the Survey</h1>
                 <form id="userForm">
-                    <label for="name">姓名:</label>
+                    <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required><br><br>
-                    <label for="experience">临床经验 (年):</label>
+                    <label for="experience">Clinical experience (years):</label>
                     <input type="number" id="experience" name="experience" required><br><br>
-                    <label for="lapExp">腹腔镜胆囊切除手术经验 (例数):</label>
+                    <label for="lapExp">Laparoscopic cholecystectomy experience (cases):</label>
                     <input type="number" id="lapExp" name="lapExp" required><br><br>
-                    <label for="unit">所在单位:</label>
+                    <label for="unit">Unit:</label>
                     <input type="text" id="unit" name="unit" required><br><br>
-                    <label for="groupId">分组编号 (1-5):</label>
-                    <input type="number" id="groupId" name="groupId" min="1" max="5" required><br><br>
-                    <button type="button" onclick="submitUserForm(false)">开始新的问卷</button>
-                    <button type="button" onclick="submitUserForm(true)">继续上次问卷</button>
+                    <button type="button" onclick="submitUserForm()">Start Survey</button>
                 </form>
             `;
             document.body.innerHTML = formHtml;
         }
 
-        async function submitUserForm(continuePrevious) {
+        function submitUserForm() {
             const form = document.getElementById('userForm');
             userInfo.name = form.name.value;
             userInfo.experience = form.experience.value;
             userInfo.lapExp = form.lapExp.value;
             userInfo.unit = form.unit.value;
-            userInfo.groupId = form.groupId.value;
-            
-            if (continuePrevious) {
-                // 尝试加载之前的响应
-                try {
-                    const response = await fetch(`/load_responses/${userInfo.name}/${userInfo.groupId}`);
-                    if (response.ok) {
-                        const data = await response.json();
-                        responses = data.responses || [];
-                        currentVidIndex = data.currentVidIndex || 1;
-                        currentQuestionIndex = data.currentQuestionIndex || 0;
-                    }
-                } catch (error) {
-                    console.error('Error loading previous responses:', error);
-                }
-            }
-            
-            // 获取该组的视频列表
-            fetch(`/group_videos/${userInfo.groupId}`)
-                .then(response => response.json())
-                .then(videos => {
-                    currentGroupVideos = videos;
-                    if (!continuePrevious) {
-                        currentVidIndex = videos[0];
-                        currentQuestionIndex = 0;
-                    }
-                    document.body.innerHTML = surveyHtml;
-                    loadQuestion();
-                    
-                    // 启动自动保存
-                    startAutoSave();
-                })
-                .catch(error => console.error('Error loading group videos:', error));
-        }
-
-        function startAutoSave() {
-            // 每分钟自动保存一次
-            autoSaveInterval = setInterval(saveResponses, 60000);
-        }
-
-        function stopAutoSave() {
-            clearInterval(autoSaveInterval);
+            document.body.innerHTML = surveyHtml;
+            loadQuestion();
         }
 
         const surveyHtml = `
-            <h1>这是一个腹腔镜胆囊切除手术视频，目前处于 Calot 三角解剖阶段。</h1>
-            <div id="vid-info">当前视频: VID001</div>
-            <div id="description">前五张图片展示了已完成的动作及其对应场景，请为第六张图片选择下一步动作。</div>
+            <h1>This is a laparoscopic cholecystectomy, currently in the Calot Triangle Dissection Phase.</h1>
+            <div id="vid-info">Current VID: VID001</div>
+            <div id="description">The first five images are completed actions and their corresponding scenes, please select the next action for the sixth image.</div>
             <div id="images-container"></div>
             <div id="next-image-container">
                 <div id="next-image"></div>
                 <div class="options-container">
-                    <label><input type="checkbox" value="dissect cystic_duct"> 胆囊管分离 (dissect cystic_duct)</label>
-                    <label><input type="checkbox" value="aspirate fluid"> 抽吸液体 (aspirate fluid)</label>
-                    <label><input type="checkbox" value="dissect gallbladder"> 胆囊分离 (dissect gallbladder)</label>
-                    <label><input type="checkbox" value="dissect cystic_artery"> 胆囊动脉分离 (dissect cystic_artery)</label>
-                    <label><input type="checkbox" value="dissect cystic_plate"> 胆囊板分离 (dissect cystic_plate)</label>
-                    <label><input type="checkbox" value="dissect fat"> 脂肪分离 (dissect fat)</label>
-                    <label><input type="checkbox" value="others"> 其他 (others)</label>
+                    <label><input type="checkbox" value="aspirate"> aspirate</label>
+                    <label><input type="checkbox" value="coagulate"> coagulate</label>
+                    <label><input type="checkbox" value="dissect"> dissect</label>
+                    <label><input type="checkbox" value="irrigate"> irrigate</label>
+                    <label><input type="checkbox" value="pack"> pack</label>
+                    <label><input type="checkbox" value="tissueRetraction"> tissueRetraction</label>
+                    <label><input type="checkbox" value="vesselClipping"> vesselClipping</label>
                 </div>
             </div>
-            <button onclick="submitAnswer()">提交</button>
+            <button onclick="submitAnswer()">Submit</button>
         `;
 
         // 在页面加载时，获取图片和选项
@@ -298,9 +247,9 @@
                 } else {
                     // 显示调查完成的信息，并显示按钮进入下一个 VID
                     document.body.innerHTML = `
-                        <h1>恭喜！您已完成当前视频的所有问题。</h1>
-                        <p>请点击下方按钮继续下一个视频。</p>
-                        <button id="next-vid-button" onclick="loadNextVid()">下一个视频</button>
+                        <h1>Congratulations! You have completed a video.</h1>
+                        <p>Please press the button below to proceed to the next video.</p>
+                        <button id="next-vid-button" onclick="loadNextVid()">Next VID</button>
                     `;
                 }
             } catch (error) {
@@ -309,21 +258,10 @@
         }
 
         function loadNextVid() {
-            const currentIndex = currentGroupVideos.indexOf(currentVidIndex);
-            if (currentIndex < currentGroupVideos.length - 1) {
-                currentVidIndex = currentGroupVideos[currentIndex + 1];
-                currentQuestionIndex = 0;
-                document.body.innerHTML = surveyHtml;
-                loadQuestion();
-                saveResponses(); // 在切换视频时保存
-            } else {
-                stopAutoSave();
-                document.body.innerHTML = `
-                    <h1>问卷完成</h1>
-                    <p>感谢您参与本次调查！</p>
-                `;
-                saveResponses();
-            }
+            currentVidIndex++;
+            currentQuestionIndex = 0;
+            document.body.innerHTML = surveyHtml;
+            loadQuestion();
         }
 
         // 处理用户的选择
@@ -340,12 +278,8 @@
         function saveResponses() {
             const data = {
                 userInfo: userInfo,
-                groupId: userInfo.groupId,
-                responses: responses,
-                currentVidIndex: currentVidIndex,
-                currentQuestionIndex: currentQuestionIndex
+                responses: responses
             };
-            
             fetch('/save_responses', {
                 method: 'POST',
                 headers: {
@@ -356,56 +290,8 @@
             .then(data => console.log('Survey responses saved:', data))
             .catch(error => console.error('Error saving responses:', error));
         }
-
-        // 添加接受说明的函数
-        function acceptInstructions() {
-            instructionsAccepted = true;
-            document.getElementById('instructionModal').style.display = 'none';
-            showUserForm();
-        }
     </script>
 </head>
 <body onload="showUserForm()">
-    <div id="instructionModal" class="modal">
-        <div class="modal-content">
-            <h2>Survey Instructions</h2>
-            <div class="instructions">
-                <h3>欢迎参与腹腔镜胆囊切除手术工作流调查</h3>
-                
-                <h4>调查目的:</h4>
-                <p>本调查旨在收集外科专家对腹腔镜胆囊切除手术工作流程的专业意见。</p>
-                
-                <h4>问卷结构:</h4>
-                <ul>
-                    <li>问卷分为5组，每组包含10个Calot三角分离阶段的视频</li>
-                    <li>您将被分配到其中一个组（1-5）</li>
-                    <li>每个视频片段包含多个手术画面</li>
-                    <li>每个问题会显示5个已完成动作的画面及其描述</li>
-                    <li>您需要预测第六张图片的下一步手术动作</li>
-                </ul>
-                
-                <h4>完成方法:</h4>
-                <ol>
-                    <li>填写个人信息</li>
-                    <li>选择分配给您的组号（1-5）</li>
-                    <li>对于每个问题:
-                        <ul>
-                            <li>查看前五个已完成动作的画面</li>
-                            <li>从选项中选择最合适的下一步动作</li>
-                            <li>点击"提交"进入下一个问题</li>
-                        </ul>
-                    </li>
-                </ol>
-                
-                <h4>重要提示:</h4>
-                <ul>
-                    <li>系统每分钟自动保存进度</li>
-                    <li>您可以随时暂停，稍后继续填写</li>
-                    <li>请完成分配组中的所有问题</li>
-                </ul>
-            </div>
-            <button class="consent-button" onclick="acceptInstructions()">我已阅读并同意继续</button>
-        </div>
-    </div>
 </body>
 </html>

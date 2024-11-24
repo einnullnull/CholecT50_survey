@@ -1,0 +1,182 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            472
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            472,
+            509
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            472,
+            509,
+            770
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            472,
+            509,
+            770,
+            833
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            472,
+            509,
+            770,
+            833,
+            877
+        ],
+        "description": [
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect cystic_plate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            472,
+            509,
+            770,
+            833,
+            877,
+            930
+        ],
+        "description": [
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            509,
+            770,
+            833,
+            877,
+            930,
+            998
+        ],
+        "description": [
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "dissect cystic_plate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            770,
+            833,
+            877,
+            930,
+            998,
+            1055
+        ],
+        "description": [
+            "dissect cystic_duct",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            833,
+            877,
+            930,
+            998,
+            1055,
+            1125
+        ],
+        "description": [
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            877,
+            930,
+            998,
+            1055,
+            1125,
+            1233
+        ],
+        "description": [
+            "dissect cystic_artery",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    }
+]

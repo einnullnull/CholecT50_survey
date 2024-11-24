@@ -1,0 +1,110 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            206
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            206,
+            248
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect fat",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            206,
+            248,
+            425
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect fat",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            206,
+            248,
+            425,
+            439
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            206,
+            248,
+            425,
+            439,
+            491
+        ],
+        "description": [
+            "None",
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            206,
+            248,
+            425,
+            439,
+            491,
+            558
+        ],
+        "description": [
+            "dissect fat",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    }
+]

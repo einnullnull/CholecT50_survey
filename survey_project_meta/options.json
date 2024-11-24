@@ -1,0 +1,34 @@
+[
+    [
+        "dissect_cysticANDduct",
+        "dissect_cysticANDplate",
+        "dissect_gallbladder",
+        "aspirate_fluid",
+        "dissect_cysticANDartery",
+        "dissect_fat"
+    ],
+    [
+        "dissect_gallbladder",
+        "dissect_fat",
+        "dissect_cysticANDplate",
+        "dissect_cysticANDartery",
+        "aspirate_fluid",
+        "dissect_cysticANDduct"
+    ],
+    [
+        "aspirate_fluid",
+        "dissect_cysticANDduct",
+        "dissect_fat",
+        "dissect_cysticANDplate",
+        "dissect_cysticANDartery",
+        "dissect_gallbladder"
+    ],
+    [
+        "dissect_cysticANDartery",
+        "dissect_gallbladder",
+        "dissect_cysticANDplate",
+        "aspirate_fluid",
+        "dissect_cysticANDduct",
+        "dissect_fat"
+    ]
+]

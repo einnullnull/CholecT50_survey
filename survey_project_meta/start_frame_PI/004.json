@@ -1,0 +1,56 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            88
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            88,
+            311
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            88,
+            311,
+            427
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            609
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            609,
+            796
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            609,
+            796,
+            827
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            609,
+            796,
+            827,
+            873
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            609,
+            796,
+            827,
+            873,
+            1167
+        ],
+        "description": [
+            "None",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    }
+]

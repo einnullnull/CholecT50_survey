@@ -1,0 +1,182 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            109
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            109,
+            296
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            109,
+            296,
+            338
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            109,
+            296,
+            338,
+            477
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            109,
+            296,
+            338,
+            477,
+            533
+        ],
+        "description": [
+            "None",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            109,
+            296,
+            338,
+            477,
+            533,
+            584
+        ],
+        "description": [
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            296,
+            338,
+            477,
+            533,
+            584,
+            639
+        ],
+        "description": [
+            "aspirate fluid",
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            338,
+            477,
+            533,
+            584,
+            639,
+            766
+        ],
+        "description": [
+            "dissect gallbladder",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            477,
+            533,
+            584,
+            639,
+            766,
+            811
+        ],
+        "description": [
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect cystic_plate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            533,
+            584,
+            639,
+            766,
+            811,
+            875
+        ],
+        "description": [
+            "dissect gallbladder",
+            "dissect cystic_plate",
+            "dissect cystic_duct",
+            "dissect cystic_plate",
+            "dissect cystic_artery",
+            "next action"
+        ]
+    }
+]

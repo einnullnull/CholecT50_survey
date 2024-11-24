@@ -1,0 +1,182 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            637
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            637,
+            814
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect fat",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            637,
+            814,
+            821
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect fat",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            637,
+            814,
+            821,
+            958
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            637,
+            814,
+            821,
+            958,
+            965
+        ],
+        "description": [
+            "None",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            637,
+            814,
+            821,
+            958,
+            965,
+            1215
+        ],
+        "description": [
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            814,
+            821,
+            958,
+            965,
+            1215,
+            1243
+        ],
+        "description": [
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            821,
+            958,
+            965,
+            1215,
+            1243,
+            1883
+        ],
+        "description": [
+            "dissect fat",
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            958,
+            965,
+            1215,
+            1243,
+            1883,
+            1903
+        ],
+        "description": [
+            "aspirate fluid",
+            "dissect fat",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_artery",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            965,
+            1215,
+            1243,
+            1883,
+            1903,
+            1953
+        ],
+        "description": [
+            "dissect fat",
+            "aspirate fluid",
+            "dissect gallbladder",
+            "dissect cystic_artery",
+            "dissect cystic_plate",
+            "next action"
+        ]
+    }
+]

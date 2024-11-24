@@ -1,0 +1,200 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            89
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            89,
+            341
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            89,
+            341,
+            496
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            89,
+            341,
+            496,
+            534
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            89,
+            341,
+            496,
+            534,
+            775
+        ],
+        "description": [
+            "None",
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            89,
+            341,
+            496,
+            534,
+            775,
+            820
+        ],
+        "description": [
+            "dissect gallbladder",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            341,
+            496,
+            534,
+            775,
+            820,
+            888
+        ],
+        "description": [
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            496,
+            534,
+            775,
+            820,
+            888,
+            1011
+        ],
+        "description": [
+            "dissect cystic_artery",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            534,
+            775,
+            820,
+            888,
+            1011,
+            1076
+        ],
+        "description": [
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            775,
+            820,
+            888,
+            1011,
+            1076,
+            1103
+        ],
+        "description": [
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            820,
+            888,
+            1011,
+            1076,
+            1103,
+            1173
+        ],
+        "description": [
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "aspirate fluid",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    }
+]

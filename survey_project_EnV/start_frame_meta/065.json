@@ -1,0 +1,308 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            213
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            213,
+            282
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            213,
+            282,
+            805
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            213,
+            282,
+            805,
+            821
+        ],
+        "description": [
+            "None",
+            "None",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            213,
+            282,
+            805,
+            821,
+            859
+        ],
+        "description": [
+            "None",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "aspirate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            213,
+            282,
+            805,
+            821,
+            859,
+            905
+        ],
+        "description": [
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "aspirate",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            282,
+            805,
+            821,
+            859,
+            905,
+            918
+        ],
+        "description": [
+            "dissect",
+            "tissueRetraction",
+            "aspirate",
+            "tissueRetraction",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            805,
+            821,
+            859,
+            905,
+            918,
+            933
+        ],
+        "description": [
+            "tissueRetraction",
+            "aspirate",
+            "tissueRetraction",
+            "coagulate",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            821,
+            859,
+            905,
+            918,
+            933,
+            947
+        ],
+        "description": [
+            "aspirate",
+            "tissueRetraction",
+            "coagulate",
+            "tissueRetraction",
+            "aspirate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            859,
+            905,
+            918,
+            933,
+            947,
+            974
+        ],
+        "description": [
+            "tissueRetraction",
+            "coagulate",
+            "tissueRetraction",
+            "aspirate",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            905,
+            918,
+            933,
+            947,
+            974,
+            1131
+        ],
+        "description": [
+            "coagulate",
+            "tissueRetraction",
+            "aspirate",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            918,
+            933,
+            947,
+            974,
+            1131,
+            1144
+        ],
+        "description": [
+            "tissueRetraction",
+            "aspirate",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            933,
+            947,
+            974,
+            1131,
+            1144,
+            1210
+        ],
+        "description": [
+            "aspirate",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "vesselClipping",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            947,
+            974,
+            1131,
+            1144,
+            1210,
+            1222
+        ],
+        "description": [
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "vesselClipping",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            974,
+            1131,
+            1144,
+            1210,
+            1222,
+            1686
+        ],
+        "description": [
+            "dissect",
+            "tissueRetraction",
+            "vesselClipping",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            1131,
+            1144,
+            1210,
+            1222,
+            1686,
+            1697
+        ],
+        "description": [
+            "tissueRetraction",
+            "vesselClipping",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            1144,
+            1210,
+            1222,
+            1686,
+            1697,
+            1838
+        ],
+        "description": [
+            "vesselClipping",
+            "tissueRetraction",
+            "dissect",
+            "tissueRetraction",
+            "dissect",
+            "next action"
+        ]
+    }
+]

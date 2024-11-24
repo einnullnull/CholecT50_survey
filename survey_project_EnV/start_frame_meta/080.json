@@ -1,0 +1,92 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            57
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            57,
+            231
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            57,
+            231,
+            268
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            57,
+            231,
+            268,
+            1136
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            57,
+            231,
+            268,
+            1136,
+            1202
+        ],
+        "description": [
+            "None",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "vesselClipping",
+            "next action"
+        ]
+    }
+]

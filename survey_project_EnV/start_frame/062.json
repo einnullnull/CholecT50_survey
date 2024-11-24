@@ -1,0 +1,74 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            0
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            0,
+            51
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect fat",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            0,
+            51,
+            154
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect fat",
+            "dissect cystic_duct",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            0,
+            51,
+            154,
+            247
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect fat",
+            "dissect cystic_duct",
+            "dissect cystic_artery",
+            "next action"
+        ]
+    }
+]

@@ -1,0 +1,218 @@
+[
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            333
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "None",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            -1,
+            333,
+            379
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "None",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            -1,
+            333,
+            379,
+            419
+        ],
+        "description": [
+            "None",
+            "None",
+            "None",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            -1,
+            333,
+            379,
+            419,
+            624
+        ],
+        "description": [
+            "None",
+            "None",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            -1,
+            333,
+            379,
+            419,
+            624,
+            689
+        ],
+        "description": [
+            "None",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            333,
+            379,
+            419,
+            624,
+            689,
+            789
+        ],
+        "description": [
+            "dissect",
+            "coagulate",
+            "dissect",
+            "coagulate",
+            "vesselClipping",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            379,
+            419,
+            624,
+            689,
+            789,
+            852
+        ],
+        "description": [
+            "coagulate",
+            "dissect",
+            "coagulate",
+            "vesselClipping",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            419,
+            624,
+            689,
+            789,
+            852,
+            888
+        ],
+        "description": [
+            "dissect",
+            "coagulate",
+            "vesselClipping",
+            "dissect",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            624,
+            689,
+            789,
+            852,
+            888,
+            983
+        ],
+        "description": [
+            "coagulate",
+            "vesselClipping",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            689,
+            789,
+            852,
+            888,
+            983,
+            1019
+        ],
+        "description": [
+            "vesselClipping",
+            "dissect",
+            "coagulate",
+            "dissect",
+            "aspirate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            789,
+            852,
+            888,
+            983,
+            1019,
+            1074
+        ],
+        "description": [
+            "dissect",
+            "coagulate",
+            "dissect",
+            "aspirate",
+            "coagulate",
+            "next action"
+        ]
+    },
+    {
+        "frame_id": [
+            852,
+            888,
+            983,
+            1019,
+            1074,
+            1498
+        ],
+        "description": [
+            "coagulate",
+            "dissect",
+            "aspirate",
+            "coagulate",
+            "dissect",
+            "next action"
+        ]
+    }
+]
