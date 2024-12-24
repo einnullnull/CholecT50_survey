@@ -45,8 +45,9 @@ VIDEO_GROUPS = {
 RESPONSES_DIR = os.path.join(PROJECT_ROOT, 'responses')
 os.makedirs(RESPONSES_DIR, exist_ok=True)
 
-# 新增：跟踪访问者数量
-visitor_count = 0
+# 维护当前组号和访问者计数
+current_group_id = 1
+visitor_count = 0  # 新增变量来跟踪访问者数量
 
 def normalize_vid(vid):
     """
@@ -67,6 +68,8 @@ def normalize_vid(vid):
 
 @app.route('/')
 def index():
+    global visitor_count
+    visitor_count += 1  # 每次访问根路由时增加访问者计数
     return render_template('index.html')
 
 
@@ -148,8 +151,10 @@ def get_valid_vids():
     })
 
 
-@app.route('/group_videos/<int:group_id>')
-def get_group_videos(group_id):
+@app.route('/group_videos')
+def get_group_videos():
+    global visitor_count
+    group_id = (visitor_count - 1) % 5 + 1  # 根据访问者数量分配组号
     if group_id in VIDEO_GROUPS:
         return jsonify(VIDEO_GROUPS[group_id])
     return jsonify({'error': 'Invalid group ID'}), 404
@@ -157,9 +162,12 @@ def get_group_videos(group_id):
 
 @app.route('/save_responses', methods=['POST'])
 def save_responses():
+    global current_group_id
     try:
         data = request.json
-        user_id = f"{data['userInfo']['name']}_{data['userInfo']['groupId']}"
+        group_id = (visitor_count - 1) % 5 + 1  # 根据访问者数量分配组号
+        user_id = f"{data['userInfo']['name']}_{group_id}"
+        data['userInfo']['groupId'] = group_id  # 自动分组
         filename = os.path.join(RESPONSES_DIR, f"{user_id}.json")
         
         with open(filename, 'w', encoding='utf-8') as f:
@@ -180,14 +188,6 @@ def load_responses(name, group_id):
         return jsonify({'status': 'not_found'}), 404
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
-
-@app.route('/showUserForm')
-def show_user_form():
-    global visitor_count
-    visitor_count += 1
-    group_id = visitor_count % 5 or 5  # 计算组号，1-5循环
-    return jsonify({'groupId': group_id})
 
 
 if __name__ == '__main__':

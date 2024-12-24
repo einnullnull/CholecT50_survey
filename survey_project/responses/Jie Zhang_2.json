@@ -1,0 +1,69 @@
+{
+    "userInfo": {
+        "name": "Jie Zhang",
+        "experience": "1",
+        "lapExp": "1",
+        "unit": "HUST",
+        "groupId": 2
+    },
+    "responses": [
+        {
+            "questionIndex": 0,
+            "answer": []
+        },
+        {
+            "questionIndex": 1,
+            "answer": []
+        },
+        {
+            "questionIndex": 2,
+            "answer": []
+        },
+        {
+            "questionIndex": 3,
+            "answer": []
+        },
+        {
+            "questionIndex": 4,
+            "answer": []
+        },
+        {
+            "questionIndex": 5,
+            "answer": []
+        },
+        {
+            "questionIndex": 6,
+            "answer": []
+        },
+        {
+            "questionIndex": 7,
+            "answer": []
+        },
+        {
+            "questionIndex": 0,
+            "answer": [
+                "dissect fat"
+            ]
+        },
+        {
+            "questionIndex": 1,
+            "answer": [
+                "others"
+            ]
+        },
+        {
+            "questionIndex": 2,
+            "answer": [
+                "others"
+            ]
+        },
+        {
+            "questionIndex": 3,
+            "answer": [
+                "others"
+            ]
+        }
+    ],
+    "currentVidIndex": 5,
+    "currentQuestionIndex": 0
+}
