@@ -130,7 +130,7 @@
             background-color: #0056b3;
         }
         #userForm label {
-            font-size: 1.4em; /* 增加受访者信息表单的文字大小 */
+            font-size: 1.4em; /* 增加受访者信息表单的文字大�� */
             margin-bottom: 10px;
         }
         #userForm input {
@@ -166,8 +166,6 @@
                     <input type="number" id="lapExp" name="lapExp" required><br><br>
                     <label for="unit">所在单位:</label>
                     <input type="text" id="unit" name="unit" required><br><br>
-                    <label for="groupId">分组编号 (1-5):</label>
-                    <input type="number" id="groupId" name="groupId" min="1" max="5" required><br><br>
                     <button type="button" onclick="submitUserForm(false)">开始新的问卷</button>
                     <button type="button" onclick="submitUserForm(true)">继续上次问卷</button>
                 </form>
@@ -181,8 +179,18 @@
             userInfo.experience = form.experience.value;
             userInfo.lapExp = form.lapExp.value;
             userInfo.unit = form.unit.value;
-            userInfo.groupId = form.groupId.value;
-            
+
+            // 获取分组编号
+            try {
+                const response = await fetch('/showUserForm');
+                if (response.ok) {
+                    const data = await response.json();
+                    userInfo.groupId = data.groupId; // 自动获取分组编号
+                }
+            } catch (error) {
+                console.error('Error fetching group ID:', error);
+            }
+
             if (continuePrevious) {
                 // 尝试加载之前的响应
                 try {

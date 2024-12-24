@@ -45,6 +45,9 @@ VIDEO_GROUPS = {
 RESPONSES_DIR = os.path.join(PROJECT_ROOT, 'responses')
 os.makedirs(RESPONSES_DIR, exist_ok=True)
 
+# 新增：跟踪访问者数量
+visitor_count = 0
+
 def normalize_vid(vid):
     """
     标准化VID格式：
@@ -177,6 +180,14 @@ def load_responses(name, group_id):
         return jsonify({'status': 'not_found'}), 404
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+
+@app.route('/showUserForm')
+def show_user_form():
+    global visitor_count
+    visitor_count += 1
+    group_id = visitor_count % 5 or 5  # 计算组号，1-5循环
+    return jsonify({'groupId': group_id})
 
 
 if __name__ == '__main__':

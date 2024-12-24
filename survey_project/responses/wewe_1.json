@@ -1,0 +1,44 @@
+{
+    "userInfo": {
+        "name": "wewe",
+        "experience": "1",
+        "lapExp": "1",
+        "unit": "HUST",
+        "groupId": 1
+    },
+    "groupId": 1,
+    "responses": [
+        {
+            "questionIndex": 0,
+            "answer": [
+                "dissect cystic_plate"
+            ]
+        },
+        {
+            "questionIndex": 1,
+            "answer": [
+                "dissect cystic_artery"
+            ]
+        },
+        {
+            "questionIndex": 2,
+            "answer": [
+                "dissect gallbladder"
+            ]
+        },
+        {
+            "questionIndex": 3,
+            "answer": [
+                "dissect cystic_plate"
+            ]
+        },
+        {
+            "questionIndex": 4,
+            "answer": [
+                "dissect cystic_plate"
+            ]
+        }
+    ],
+    "currentVidIndex": 2,
+    "currentQuestionIndex": 0
+}
