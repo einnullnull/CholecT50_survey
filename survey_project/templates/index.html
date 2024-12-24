@@ -130,7 +130,7 @@
             background-color: #0056b3;
         }
         #userForm label {
-            font-size: 1.4em; /* 增加受访者信息表单的文字大小 */
+            font-size: 1.4em; /* 增加受访者信息表单的文字大�� */
             margin-bottom: 10px;
         }
         #userForm input {
@@ -179,20 +179,41 @@
             userInfo.lapExp = form.lapExp.value;
             userInfo.unit = form.unit.value;
 
-            // 获取该组的视频列表
-            fetch(`/group_videos`) // 不再传递 groupId
-                .then(response => response.json())
-                .then(videos => {
-                    currentGroupVideos = videos;
-                    currentVidIndex = videos[0];
-                    currentQuestionIndex = 0;
-                    document.body.innerHTML = surveyHtml;
-                    loadQuestion();
-                    
-                    // 启动自动保存
-                    startAutoSave();
-                })
-                .catch(error => console.error('Error loading group videos:', error));
+            try {
+                const response = await fetch('/save_responses', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userInfo }) // 发送用户信息以获取 groupId
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    userInfo.groupId = result.groupId; // 确保 groupId 被设置
+                    console.log('Group ID:', userInfo.groupId); // 调试输出
+                } else {
+                    console.error('Error saving user info:', result.error); // 错误处理
+                    return; // 终止函数执行
+                }
+
+                // 获取该组的视频列表
+                fetch(`/group_videos?groupId=${userInfo.groupId}`) // 传递 groupId
+                    .then(response => response.json())
+                    .then(videos => {
+                        currentGroupVideos = videos;
+                        currentVidIndex = videos[0];
+                        currentQuestionIndex = 0;
+                        document.body.innerHTML = surveyHtml;
+                        loadQuestion();
+                        
+                        // 启动自动保存
+                        startAutoSave();
+                    })
+                    .catch(error => console.error('Error loading group videos:', error));
+            } catch (error) {
+                console.error('Error submitting user form:', error);
+            }
         }
 
         function startAutoSave() {

@@ -68,8 +68,6 @@ def normalize_vid(vid):
 
 @app.route('/')
 def index():
-    global visitor_count
-    visitor_count += 1  # 每次访问根路由时增加访问者计数
     return render_template('index.html')
 
 
@@ -153,27 +151,50 @@ def get_valid_vids():
 
 @app.route('/group_videos')
 def get_group_videos():
-    global visitor_count
-    group_id = (visitor_count - 1) % 5 + 1  # 根据访问者数量分配组号
-    if group_id in VIDEO_GROUPS:
+    group_id = request.args.get('groupId', type=int)
+    if group_id and group_id in VIDEO_GROUPS:
         return jsonify(VIDEO_GROUPS[group_id])
     return jsonify({'error': 'Invalid group ID'}), 404
 
 
 @app.route('/save_responses', methods=['POST'])
 def save_responses():
-    global current_group_id
     try:
         data = request.json
-        group_id = (visitor_count - 1) % 5 + 1  # 根据访问者数量分配组号
-        user_id = f"{data['userInfo']['name']}_{group_id}"
-        data['userInfo']['groupId'] = group_id  # 自动分组
-        filename = os.path.join(RESPONSES_DIR, f"{user_id}.json")
+        user_info = data['userInfo']
         
+        # 获取所有已有用户的信息
+        existing_users = []
+        for file in os.listdir(RESPONSES_DIR):
+            with open(os.path.join(RESPONSES_DIR, file), 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+                existing_users.append(existing_data['userInfo'])
+        
+        # 检查是否为新用户
+        is_new_user = True
+        for existing_user in existing_users:
+            if (user_info['name'] == existing_user['name'] and 
+                user_info['age'] == existing_user['age'] and 
+                user_info['gender'] == existing_user['gender']):
+                is_new_user = False
+                group_id = existing_user['groupId']
+                break
+                
+        if is_new_user:
+            # 新用户: 计算实际访问者数量并分配组
+            visitor_count = len(existing_users) + 1
+            group_id = ((visitor_count - 1) % 5) + 1
+            data['userInfo']['groupId'] = group_id
+        else:
+            # 老用户: 使用已有的组号
+            data['userInfo']['groupId'] = group_id
+            
+        # 保存响应
+        filename = os.path.join(RESPONSES_DIR, f"{user_info['name']}_{data['userInfo']['groupId']}.json")
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
-        
-        return jsonify({'status': 'success'})
+            
+        return jsonify({'status': 'success', 'groupId': data['userInfo']['groupId']})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
